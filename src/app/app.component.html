@@ -1,8 +1,9 @@
 <div class="nav-container" style="height: 10vh;">
   <app-main-nav (link)="currentLink($event)"></app-main-nav>
 </div>
-<div class="content-container" style="height: 90vh;overflow: hidden;">
+<div class="content-container" style="height: 90vh;">
   <app-slideshow *ngIf="link === 'Inicio' || link === 'Galva-Alum' "></app-slideshow>
   <app-us *ngIf="link === 'Nosotros'"></app-us>
   <app-catalog *ngIf="link === 'Calefacción'"></app-catalog>
+  <app-contact *ngIf="link === 'Contacto'"></app-contact>
 </div>

@@ -23,17 +23,17 @@ export class SlideshowComponent implements OnInit {
 
   slides: Slide[] = [
     {
-      'imgUrl': 'assets/slideshow/bg1.jpg',
+      'imgUrl': '/assets/slideshow/bg1.jpg',
       'title': 'Somos Galva-Alum',
       'desc': 'Líderes en Aluminio y techumbres de Zinc-Alum'
     },
     {
-      'imgUrl': 'assets/slideshow/bg2.jpg',
+      'imgUrl': '/assets/slideshow/bg2.jpg',
       'title': 'Second Slide',
       'desc': 'This is my description'
     },
     {
-      'imgUrl': 'assets/slideshow/bg3.jpg',
+      'imgUrl': '/assets/slideshow/bg3.jpg',
       'title': 'Third Slide',
       'desc': 'This is my description'
     }

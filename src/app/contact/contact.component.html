@@ -1,0 +1,27 @@
+<div class="content">
+
+    <div class="overlay" [ngStyle]="{'z-index': overlayIndex}"></div>
+
+    <div class="title back">
+        <h1>Contacto</h1>
+    </div>
+
+    <div class="title">
+        <h1>Contacto</h1>
+    </div>
+
+    <div class="svg-container">
+        <app-svg-marker (click)="showMap()"></app-svg-marker>
+    </div>
+
+    <div class="contact-text">
+        <h3>Avenida Doce de Febrero</h3>
+        <h3>516, Chillán</h3>
+        <p (click)="showMap()" class="map-link">{{mapTxt}}</p>
+    </div>
+
+    <agm-map *ngIf="map == true" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="defaultMapUI">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+
+</div>

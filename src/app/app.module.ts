@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+//Animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+//Angular Maps
+import { AgmCoreModule } from '@agm/core';
 
 //Services
 import { DataService } from './data.service';
 
 // ngx-bootstrap imports //
-import { AlertModule } from 'ngx-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
@@ -19,6 +23,10 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { UsComponent } from './us/us.component';
+import { SvgDrawsComponent } from './us/svg-draws/svg-draws.component';
+import { SvgDraws2Component } from './us/svg-draws2/svg-draws2.component';
+import { ContactComponent } from './contact/contact.component';
+import { SvgMarkerComponent } from './contact/svg-marker/svg-marker.component';
 
 
 
@@ -29,7 +37,11 @@ import { UsComponent } from './us/us.component';
     CatalogComponent,
     MainNavComponent,
     SlideshowComponent,
-    UsComponent
+    UsComponent,
+    SvgDrawsComponent,
+    SvgDraws2Component,
+    ContactComponent,
+    SvgMarkerComponent
     
   ],
   imports: [
@@ -38,9 +50,12 @@ import { UsComponent } from './us/us.component';
     HttpModule,
     BrowserAnimationsModule,
     //ngx-bootstrap modules
-    AlertModule.forRoot(),
     BsDropdownModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    //Angular Maps
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD6OZKtZj9QdXcISNEcKww-zAI7z1k6aQ0'
+    })
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

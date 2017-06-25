@@ -1,0 +1,61 @@
+.content {
+    position: relative;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,9b9b9b+100 */
+    background: #cedce7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #cedce7 0%, #9b9b9b 100%); 
+    background: -webkit-linear-gradient(top,  #cedce7 0%,#9b9b9b 100%); 
+    background: linear-gradient(to bottom,  #cedce7 0%,#9b9b9b 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#9b9b9b',GradientType=0 );
+}
+.content>svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.title {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px lightblue,
+                    0 0 25px lightcyan,
+                    0 0 50px lightgray;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+}
+
+.title.back h1 {
+    transform: translateY(-30%);
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    z-index: -1;
+    color: #fff;
+    opacity: 0.5;
+    user-select: none;
+}
+
+@media (max-width: 600px) {
+    .title.back h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .content {
+        height: 200vh;
+    }
+}
+
+.col-sm-6 {
+    margin-top: 20rem;
+    padding: 0 5rem;
+}
+
+.svg-container {
+    width: 70%;
+    margin: 0 auto;
+}

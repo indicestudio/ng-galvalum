@@ -1,0 +1,11 @@
+:host {
+    cursor: pointer;
+}
+
+svg {
+    transition: all 0.2s ease-in-out;
+}
+
+svg:hover {
+    transform: scale(1.2) translateY(-10%);
+}
