@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-main-nav',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavComponent implements OnInit {
 
-  constructor() { }
+  @Output() link: EventEmitter<string> = new EventEmitter();
+  clikedLink: string;
+
+  constructor(private dataService: DataService) { }
+
+  categories: string[];
 
   ngOnInit() {
+    this.categories = this.dataService.getCategories();
   }
 
+  linkCliked(e) {
+    this.clikedLink = e.target.innerText;
+    this.link.emit(this.clikedLink);
+  }
+  
 }

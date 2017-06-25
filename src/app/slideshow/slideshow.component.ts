@@ -1,42 +1,71 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Slide } from '../slide';
-
-import { Observable } from 'rxjs/Rx'
 
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-slideshow',
   templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.css']
+  styleUrls: ['./slideshow.component.css'],
+  animations: [
+    trigger('slideState', [
+      state('inactive', style({
+        opacity: '0'
+      })),
+      state('active', style({
+        opacity: '1'
+      })),
+      transition('inactive <=> active', animate('2000ms ease-in-out'))
+    ])
+  ]
 })
 export class SlideshowComponent implements OnInit {
 
-  @ViewChild('thisSlide') currentSlide;
-  slideState: boolean;
-
   slides: Slide[] = [
     {
-      'imgUrl': 'assets/bg1.jpg',
-      'title': 'First Slide',
-      'desc': 'This is my description'
+      'imgUrl': 'assets/slideshow/bg1.jpg',
+      'title': 'Somos Galva-Alum',
+      'desc': 'Líderes en Aluminio y techumbres de Zinc-Alum'
     },
     {
-      'imgUrl': 'assets/bg2.jpg',
+      'imgUrl': 'assets/slideshow/bg2.jpg',
       'title': 'Second Slide',
       'desc': 'This is my description'
     },
     {
-      'imgUrl': 'assets/bg3.jpg',
+      'imgUrl': 'assets/slideshow/bg3.jpg',
       'title': 'Third Slide',
       'desc': 'This is my description'
     }
   ];
 
-
+  slideIndex: number = 0;
+  slideState: string = 'inactive';
   constructor() {}
 
-  ngOnInit(){}
+  ngOnInit() {
+    let timer = setTimeout(() => {
+      this.changeSlideState();
+    }, 500)
+  }
+
+  changeSlideState(){
+    this.slideState = 'active';
+    let timer = setTimeout(() => {
+      this.slideState = 'inactive';
+      this.changeSlide();
+    }, 4000);
+  }
+
+  changeSlide(){
+    let timer = setTimeout(() => {
+      this.slideIndex++;
+      if (this.slideIndex > 2) {
+        this.slideIndex = 0;
+      }
+      this.changeSlideState();
+    }, 4000);
+  }
 
 
 

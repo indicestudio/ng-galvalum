@@ -1,13 +1,16 @@
-<div class="carousel">
+<div class="carousel" [ngStyle]="{'width.vw' : slides.length * 100}">
 
-  <div  #thisSlide *ngFor="let slide of slides; let i = index">
+  <div class="slide"
+    [ngStyle]="{
+      'background-image': 'url(' + slides[slideIndex].imgUrl + ')'
+    }"
+    (click)="changeSlideState()"
+    [@slideState]="slideState"
+  ></div>
 
-    <img src="{{ slide.imgUrl }}" alt="{{ slide.desc }}">
-    <div class="carousel-caption">
-      <h3>{{ slide.title }}</h3>
-      <p>{{ slide.desc }}</p>
-    </div>
-
+  <div class="carousel-caption" [@slideState]="slideState">
+    <h3>{{ slides[slideIndex].title }}</h3>
+    <p>{{ slides[slideIndex].desc }}</p>
   </div>
 
 </div>

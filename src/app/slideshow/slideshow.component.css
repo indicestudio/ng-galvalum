@@ -1,5 +1,35 @@
 .carousel {
+  display: flex;
   height: 95vh;
   overflow: hidden;
   text-align: center;
+}
+
+.slide {
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-caption {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+  max-height: 15rem;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.carousel-caption:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(190, 30, 45, 0.8);
 }
