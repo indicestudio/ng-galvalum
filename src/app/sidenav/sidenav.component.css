@@ -1,0 +1,27 @@
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  background-color: lightgrey;
+  display: inline-block;
+  height: 100%;
+  transition: transform 100ms ease-in-out;
+  width: 200px;
+  z-index: 900;
+}
+
+.outer-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.inner-nav {
+  list-style: none;
+}
+
+@media (max-width: 960px) {
+  .main-menu {
+    transform: translateX(-100%);
+  }
+}
