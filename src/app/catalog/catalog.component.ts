@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { DataCatalog } from '../data-catalog';
 
 @Component({
   selector: 'app-catalog',
@@ -7,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogComponent implements OnInit {
 
+  products: DataCatalog[] = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit() {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.dataService.getProducts().then(products => {
+      this.products = products
+    });
   }
 
 }

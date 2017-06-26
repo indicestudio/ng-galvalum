@@ -27,6 +27,7 @@ import { SvgDrawsComponent } from './us/svg-draws/svg-draws.component';
 import { SvgDraws2Component } from './us/svg-draws2/svg-draws2.component';
 import { ContactComponent } from './contact/contact.component';
 import { SvgMarkerComponent } from './contact/svg-marker/svg-marker.component';
+import { ProductCardComponent } from './catalog/product-card/product-card.component';
 
 
 
@@ -41,7 +42,8 @@ import { SvgMarkerComponent } from './contact/svg-marker/svg-marker.component';
     SvgDrawsComponent,
     SvgDraws2Component,
     ContactComponent,
-    SvgMarkerComponent
+    SvgMarkerComponent,
+    ProductCardComponent
     
   ],
   imports: [

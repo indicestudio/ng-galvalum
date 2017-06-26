@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
+import { DataCatalog } from '../data-catalog';
 
 @Component({
   selector: 'app-main-nav',
@@ -10,18 +11,22 @@ export class MainNavComponent implements OnInit {
 
   @Output() link: EventEmitter<string> = new EventEmitter();
   clikedLink: string;
+  categories: string[] = [];
 
   constructor(private dataService: DataService) { }
 
-  categories: string[];
 
   ngOnInit() {
-    this.categories = this.dataService.getCategories();
+    this.getCategories();
   }
 
   linkCliked(e) {
     this.clikedLink = e.target.innerText;
     this.link.emit(this.clikedLink);
+  }
+
+  getCategories(){
+    this.dataService.getProducts().then(x => x.forEach(p => this.categories.push(p.categoria)));
   }
   
 }
