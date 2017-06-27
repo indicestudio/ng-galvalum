@@ -1,7 +1,20 @@
-export interface DataCatalog {
-    categoria: string;
+export interface Products {
+    id: string;
     nombre: string;
-    imgUrl: string;
+    subcat: string;
+    descripcion: string;
+    portadaImgUrl: string;
     dimensiones: string[];
-    galeria: string[];
+    tags: string[];
+    galeriaImgUrls: string[];
+}
+
+export interface Categories {
+    id: string;
+    nombre: string;
+    productos: Products[];
+}
+
+export interface DataCatalog {
+    categorias: Categories[];
 }
