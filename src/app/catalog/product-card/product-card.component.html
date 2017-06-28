@@ -1,11 +1,6 @@
 <div class="card">
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="image" [ngStyle]="{'background-image':'url(' + imgUrl + ')'}"></div>
-    </div>
-    <div class="col-sm-8">
-      <h1>{{productName}}</h1>
-      <p>{{productDescription}}</p>
-    </div>
+  <div class="image" [ngStyle]="{'background-image':'url(' + imgUrl + ')'}"></div>
+  <div class="card-content">
+    <p>{{productName}}</p>
   </div>
 </div>

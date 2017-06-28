@@ -10,12 +10,12 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
     trigger('slideState', [
       state('inactive', style({
-        opacity: '0'
+        opacity: '0.5'
       })),
       state('active', style({
         opacity: '1'
       })),
-      transition('inactive <=> active', animate('2000ms ease-in-out'))
+      transition('inactive <=> active', animate('4000ms ease-in-out'))
     ])
   ]
 })
@@ -42,6 +42,7 @@ export class SlideshowComponent implements OnInit {
   slideIndex: number = 0;
   slideState: string = 'inactive';
   constructor() {}
+  slideTime: number = 4000;
 
   ngOnInit() {
     let timer = setTimeout(() => {
@@ -54,7 +55,7 @@ export class SlideshowComponent implements OnInit {
     let timer = setTimeout(() => {
       this.slideState = 'inactive';
       this.changeSlide();
-    }, 4000);
+    }, this.slideTime);
   }
 
   changeSlide(){
@@ -64,7 +65,7 @@ export class SlideshowComponent implements OnInit {
         this.slideIndex = 0;
       }
       this.changeSlideState();
-    }, 4000);
+    }, this.slideTime);
   }
 
 

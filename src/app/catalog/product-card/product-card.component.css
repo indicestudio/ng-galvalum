@@ -1,9 +1,25 @@
 .card {
-    padding: 2rem;
+    display: flex;
     border: 1px solid lightgray;
+    height: 160px;
+    margin: 2rem 1rem;
 }
+
 .image {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    width: 40%;
+}
+
+.card-content {
+    width: 80%;
+    text-align: center;
+    padding-top: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-content:hover {
+    background-color: lightblue;
+    cursor: pointer;
 }

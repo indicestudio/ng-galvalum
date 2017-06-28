@@ -26,7 +26,7 @@ export class MainNavComponent implements OnInit {
   }
 
   getCategories(){
-    this.dataService.getProducts().then(x => x.forEach(p => this.categories.push(p.categoria)));
+    this.categories = this.dataService.getCategoriesNames();
   }
   
 }

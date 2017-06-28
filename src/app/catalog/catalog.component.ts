@@ -9,19 +9,20 @@ import { DataCatalog } from '../data-catalog';
 })
 export class CatalogComponent implements OnInit {
 
-  products: DataCatalog[] = [];
+  data: DataCatalog[];
 
   constructor(private dataService: DataService) {
   }
 
-  ngOnInit() {
-    this.getProducts();
+  getData():void {
+    this.dataService.getData().then(d => this.data = d);
   }
 
-  getProducts() {
-    this.dataService.getProducts().then(products => {
-      this.products = products
-    });
+  ngOnInit():void {
+    this.getData();
   }
+
+
+
 
 }
