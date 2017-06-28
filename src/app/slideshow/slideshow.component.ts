@@ -28,7 +28,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
         opacity: '1',
         transform: 'translate(-50%, -50%)'
       })),
-      transition('inactive => active', animate('2000ms ease-in-out'))     
+      transition('inactive <=> active', animate('2000ms ease-in-out'))     
     ])
   ]
 })
@@ -55,7 +55,7 @@ export class SlideshowComponent implements OnInit {
 
   slideIndex: number = 0;
   slideState: string = 'inactive';
-
+  
   timeBetweenSlides: number = 4000;
   slideTranslateX: number = 0;
 

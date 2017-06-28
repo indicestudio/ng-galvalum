@@ -10,7 +10,9 @@
       'background-image':'url(' + slide.imgUrl + ')'
     }"
   >
-    <div class="carousel-caption" [@captionState]="slideState">
+    <div class="carousel-caption" 
+      [@captionState]="captionState">
+
       <h3>{{ slide.title }}</h3>
       <p>{{ slide.desc }}</p>
     </div>
