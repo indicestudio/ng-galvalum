@@ -10,17 +10,31 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
     trigger('slideState', [
       state('inactive', style({
-        opacity: '0.5'
+        opacity: '0',
+        transform: 'translateX(100%)'
       })),
       state('active', style({
-        opacity: '1'
+        opacity: '1',
+        transform: 'translateX(0)'
       })),
-      transition('inactive <=> active', animate('4000ms ease-in-out'))
+      transition('inactive => active', animate('2000ms ease-in-out'))
+    ]),
+    trigger('captionState', [
+      state('inactive', style({
+        opacity: '0',
+        transform: 'translateY(-100%)'
+      })),
+      state('active', style({
+        opacity: '1',
+        transform: 'translate(-50%, -50%)'
+      })),
+      transition('inactive => active', animate('2000ms ease-in-out'))     
     ])
   ]
 })
 export class SlideshowComponent implements OnInit {
 
+  // Slide Data
   slides: Slide[] = [
     {
       'imgUrl': '/assets/slideshow/bg1.jpg',
@@ -41,9 +55,34 @@ export class SlideshowComponent implements OnInit {
 
   slideIndex: number = 0;
   slideState: string = 'inactive';
-  constructor() {}
-  slideTime: number = 4000;
 
+  timeBetweenSlides: number = 4000;
+  slideTranslateX: number = 0;
+
+  constructor() {}
+
+  ngOnInit() {
+    this.startSlides();
+  }
+
+  startSlides() {
+    if (this.slideTranslateX === (this.slides.length - 1) * -100) {
+      this.slideTranslateX = 0;
+    }
+    setTimeout(()=>{
+      this.slideState = 'active';
+      setTimeout(()=>{
+        this.slideTranslateX -= 100;
+        setTimeout(()=>{
+          this.startSlides();
+        },this.timeBetweenSlides);
+      }, this.timeBetweenSlides);
+    }, 450);
+  }
+
+
+
+/*
   ngOnInit() {
     let timer = setTimeout(() => {
       this.changeSlideState();
@@ -67,6 +106,9 @@ export class SlideshowComponent implements OnInit {
       this.changeSlideState();
     }, this.slideTime);
   }
+  */
+
+
 
 
 

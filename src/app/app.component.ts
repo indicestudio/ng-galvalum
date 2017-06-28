@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-  link: string = 'Calefacción';
+  link: string = 'Inicio';
 
   constructor() {
   }

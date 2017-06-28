@@ -3,6 +3,8 @@
   height: 95vh;
   overflow: hidden;
   text-align: center;
+  transform: translateX(0);
+  transition: transform 2s ease;
 }
 
 .slide {
