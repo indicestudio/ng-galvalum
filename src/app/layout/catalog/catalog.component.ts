@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
-import { DataCatalog } from '../data-catalog';
+import { DataService } from '../../shared/data-service.service';
+import { DataCatalog } from '../../shared/data-catalog.model';
 
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
-  styleUrls: ['./catalog.component.css']
+  styleUrls: ['./catalog.component.css'],
+  providers: [DataService]
 })
 export class CatalogComponent implements OnInit {
 
@@ -21,8 +22,5 @@ export class CatalogComponent implements OnInit {
   ngOnInit():void {
     this.getData();
   }
-
-
-
 
 }

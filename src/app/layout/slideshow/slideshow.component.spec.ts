@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { LayoutModule } from '../layout.module';
 import { SlideshowComponent } from './slideshow.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SlideshowComponent', () => {
   let component: SlideshowComponent;
@@ -8,6 +9,7 @@ describe('SlideshowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [ SlideshowComponent ]
     })
     .compileComponents();

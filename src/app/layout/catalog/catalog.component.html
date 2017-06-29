@@ -2,11 +2,13 @@
     <ng-container *ngFor="let c of data; let i = index">
         <ng-container *ngFor="let categoria of c.categorias">
             <div class="col-sm-3">
+
                 <app-product-card
                     *ngFor="let producto of categoria.productos" 
                     [productName]="producto.nombre"
                     [imgUrl]="producto.portadaImgUrl">
                 </app-product-card>
+                
             </div>
         </ng-container>
     </ng-container>

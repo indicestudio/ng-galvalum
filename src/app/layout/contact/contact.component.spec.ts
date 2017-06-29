@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SvgMarkerComponent } from './svg-marker/svg-marker.component';
 import { ContactComponent } from './contact.component';
+import { AgmCoreModule } from '@agm/core';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,7 +9,12 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      imports: [
+        AgmCoreModule.forRoot({
+          apiKey: 'AIzaSyDjvzMytGO6RBccN3eb_i18UImohdZmMWQ'
+        })  
+      ],
+      declarations: [ ContactComponent, SvgMarkerComponent ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MainNavComponent } from './main-nav.component';
+import { DataService } from '../../shared/data-service.service';
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -8,7 +8,8 @@ describe('MainNavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainNavComponent ]
+      declarations: [ MainNavComponent ],
+      providers: [DataService]
     })
     .compileComponents();
   }));

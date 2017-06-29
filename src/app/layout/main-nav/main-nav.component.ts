@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { DataService } from '../data.service';
-import { DataCatalog } from '../data-catalog';
+import { DataService } from '../../shared/data-service.service';
+import { DataCatalog } from '../../shared/data-catalog.model';
+
 
 @Component({
   selector: 'app-main-nav',
@@ -25,8 +26,10 @@ export class MainNavComponent implements OnInit {
     this.link.emit(this.clikedLink);
   }
 
-  getCategories(){
-    this.categories = this.dataService.getCategoriesNames();
+  getCategories():void{
+    this.dataService.getData().then(x=>{
+      x.forEach(x=>x.categorias.forEach(x=>this.categories.push(x.nombre)));
+    });
   }
   
 }

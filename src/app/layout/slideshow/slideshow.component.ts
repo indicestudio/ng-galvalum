@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Slide } from '../slide';
+import { Slide } from '../../shared/slide.model';
 
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 

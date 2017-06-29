@@ -1,4 +1,4 @@
-import { DataCatalog } from './data-catalog';
+import { DataCatalog } from './data-catalog.model';
 
 export const DATA: DataCatalog[] = [
   {
