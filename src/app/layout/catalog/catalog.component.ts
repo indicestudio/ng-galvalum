@@ -15,11 +15,11 @@ export class CatalogComponent implements OnInit {
   constructor(private dataService: DataService) {
   }
 
-  getData():void {
+  getData(): void {
     this.dataService.getData().then(d => this.data = d);
   }
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getData();
   }
 
