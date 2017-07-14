@@ -26,10 +26,10 @@ export class MainNavComponent implements OnInit {
     this.link.emit(this.clikedLink);
   }
 
-  getCategories():void{
-    this.dataService.getData().then(x=>{
-      x.forEach(x=>x.categorias.forEach(x=>this.categories.push(x.nombre)));
+  getCategories(): void {
+    this.dataService.getData().then(i => {
+      i.forEach(e => e.categorias.forEach(x => this.categories.push(x.nombre)));
     });
   }
-  
+
 }

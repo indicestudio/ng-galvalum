@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { DataCatalog, Categories } from './../../shared/data-catalog.model';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../../shared/data-service.service';
-import { DataCatalog } from '../../shared/data-catalog.model';
 
 @Component({
   selector: 'app-catalog',
@@ -11,6 +11,7 @@ import { DataCatalog } from '../../shared/data-catalog.model';
 export class CatalogComponent implements OnInit {
 
   data: DataCatalog[];
+  @Input() currentCategory;
 
   constructor(private dataService: DataService) {
   }

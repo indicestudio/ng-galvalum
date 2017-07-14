@@ -6,7 +6,12 @@
   <div class="content-container">
     <app-slideshow *ngIf="link === 'Inicio' || link === 'Galva-Alum' "></app-slideshow>
     <app-us *ngIf="link === 'Nosotros'"></app-us>
-    <app-catalog *ngIf="link === 'Calefacción'"></app-catalog>
+    <app-catalog [currentCategory]="link"
+      *ngIf="link === 'Calefacción' 
+      || link === 'Casa y Jardín'
+      || link === 'Cubiertas'
+      || link === 'Hornos y Quinchos'">
+    </app-catalog>
     <app-contact *ngIf="link === 'Contacto'"></app-contact>
   </div>
   

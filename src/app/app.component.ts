@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  link: string = 'Inicio';
+  link = 'Inicio';
 
   constructor() {
   }
