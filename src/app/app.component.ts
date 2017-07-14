@@ -13,6 +13,5 @@ export class AppComponent {
 
   currentLink(e) {
     this.link = e;
-    console.log(this.link);
   }
 }
