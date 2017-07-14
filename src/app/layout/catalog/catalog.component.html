@@ -1,13 +1,13 @@
 <div class="container">
 
-    <div class="col-sm-3">
 
         <app-product-card
+            class="col-sm-3"
             *ngFor="let producto of filteredByCat"
             [productName]="producto.nombre"
             [imgUrl]="producto.portadaImgUrl">
         </app-product-card>
         
-    </div>
+
 
 </div>

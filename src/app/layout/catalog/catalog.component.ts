@@ -1,5 +1,5 @@
 import { DataCatalog, Categories, Products } from './../../shared/data-catalog.model';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { DataService } from '../../shared/data-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataService } from '../../shared/data-service.service';
   styleUrls: ['./catalog.component.css'],
   providers: [DataService]
 })
-export class CatalogComponent implements OnInit {
+export class CatalogComponent implements OnInit, OnChanges {
 
   @Input() currentCategory;
   filteredByCat: Products[];
@@ -29,6 +29,10 @@ export class CatalogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  ngOnChanges() {
     this.getData();
   }
 
