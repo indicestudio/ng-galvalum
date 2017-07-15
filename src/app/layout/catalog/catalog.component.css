@@ -1,3 +1,8 @@
+.container {
+    overflow: scroll;
+    max-height: 90vh;
+}
+
 .col-sm-3 {
     padding: 0;
 }
