@@ -8,10 +8,12 @@
     background: linear-gradient(to bottom,  #cedce7 0%,#9b9b9b 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#9b9b9b',GradientType=0 );
 }
+
 .content>svg {
     position: absolute;
     left: 0;
     bottom: 0;
+    
 }
 
 .title {
@@ -26,6 +28,7 @@
                     0 0 50px lightgray;
     text-transform: uppercase;
     transform: translateX(-50%);
+    
 }
 
 .title.back h1 {

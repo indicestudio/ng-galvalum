@@ -12,11 +12,11 @@ ul, ol {
     z-index: -1; 
 }
 
-.cb-slideshow:after { 
+/* .cb-slideshow:after { 
     content: '';
     background: transparent url(/assets/slideshow/pattern.png) repeat top left;
     z-index: 1;
-}
+} */
 
 .cb-slideshow li span { 
     width: 100%;
@@ -42,7 +42,7 @@ ul, ol {
     text-align: center;
     opacity: 0;
     color: #fff;
-    animation: titleAnimation 18s linear infinite 0s; 
+    animation: titleAnimation 18s linear infinite 0s;
 }
 .cb-slideshow li div h3 {
     font-size: 4rem;

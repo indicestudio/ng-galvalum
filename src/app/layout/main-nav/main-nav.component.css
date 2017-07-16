@@ -5,4 +5,53 @@
   background-color: white;
   border: none;
   padding: 1vh 0;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.inner-item {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 0.4s forwards ease-in 2s;
+}
+
+.inner-item:nth-child(2) {
+  animation: slideIn 0.4s forwards ease-in 2.1s;
+}
+
+.inner-item:nth-child(3) {
+  animation: slideIn 0.4s forwards ease-in 2.2s;
+}
+
+.inner-item:nth-child(4) {
+  animation: slideIn 0.4s forwards ease-in 2.3s;
+}
+
+.inner-item:nth-child(5) {
+  animation: slideIn 0.4s forwards ease-in 2.4s;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

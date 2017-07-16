@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-        <li><a (click)="linkCliked($event)">Inicio</a></li>
+        <li class="inner-item"><a (click)="linkCliked($event)">Inicio</a></li>
 
-        <li><a (click)="linkCliked($event)">Nosotros</a></li>
+        <li class="inner-item"><a (click)="linkCliked($event)">Nosotros</a></li>
 
-        <li class="btn-group" dropdown>
+        <li class="btn-group inner-item" dropdown>
           <a href="#" dropdownToggle>Catalogo <span class="caret"></span></a>
           <ul *dropdownMenu class="dropdown-menu" role="menu">
             <li role="menuitem" *ngFor="let category of categories">
@@ -28,12 +28,12 @@
           </ul>
         </li>
 
-        <li><a (click)="linkCliked($event)">Contacto</a></li>
+        <li class="inner-item"><a (click)="linkCliked($event)">Contacto</a></li>
       </ul>
 
 
 
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right inner-item">
 
         <form class="navbar-form navbar-left">
           <div class="form-group">
