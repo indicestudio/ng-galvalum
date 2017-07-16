@@ -20,7 +20,7 @@
         <li class="inner-item"><a (click)="linkCliked($event)">Nosotros</a></li>
 
         <li class="btn-group inner-item" dropdown>
-          <a href="#" dropdownToggle>Catalogo <span class="caret"></span></a>
+          <a dropdownToggle>Catalogo <span class="caret"></span></a>
           <ul *dropdownMenu class="dropdown-menu" role="menu">
             <li role="menuitem" *ngFor="let category of categories">
               <a class="dropdown-item" (click)="linkCliked($event)">{{ category }}</a>
