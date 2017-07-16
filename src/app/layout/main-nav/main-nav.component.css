@@ -27,6 +27,8 @@
   opacity: 0;
   transform: translateY(100%);
   animation: slideIn 0.4s forwards ease-in 2s;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .inner-item:nth-child(2) {
@@ -43,6 +45,11 @@
 
 .inner-item:nth-child(5) {
   animation: slideIn 0.4s forwards ease-in 2.4s;
+}
+
+.inner-item:hover {
+  border-bottom: 2px solid darkblue;
+  cursor: pointer;
 }
 
 @keyframes slideIn {
