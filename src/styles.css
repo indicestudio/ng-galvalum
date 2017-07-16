@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

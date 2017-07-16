@@ -3,7 +3,10 @@
 
         <app-product-card
             class="col-sm-3"
-            *ngFor="let producto of filteredByCat"
+            *ngFor="let producto of filteredByCat; let i = index"
+            [ngStyle]="{
+                'animation': 'slideIn 0.4s ease-in 1'
+            }"
             [productName]="producto.nombre"
             [imgUrl]="producto.portadaImgUrl">
         </app-product-card>
