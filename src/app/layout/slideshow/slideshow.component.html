@@ -8,7 +8,7 @@
 
     <li *ngFor="let slide of slides">
       <span  [ngStyle]="{'background-image': 'url(' + slide.imgUrl + ')'}">{{slide.title}}</span>
-      <div><h3>{{slide.desc}}</h3></div>
+      <div class="description"><h3>{{slide.desc}}</h3></div>
     </li>
 
 </ul>
