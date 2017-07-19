@@ -20,6 +20,7 @@ import { SvgMarkerComponent } from './contact/svg-marker/svg-marker.component';
 import { UsComponent } from './us/us.component';
 import { SvgDrawsComponent } from './us/svg-draws/svg-draws.component';
 import { SvgDraws2Component } from './us/svg-draws2/svg-draws2.component';
+import { GalleryComponent } from './catalog/gallery/gallery.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { SvgDraws2Component } from './us/svg-draws2/svg-draws2.component';
     SvgMarkerComponent,
     UsComponent,
     SvgDrawsComponent,
-    SvgDraws2Component
+    SvgDraws2Component,
+    GalleryComponent,
   ],
   exports: [
     MainNavComponent,
@@ -50,7 +52,8 @@ import { SvgDraws2Component } from './us/svg-draws2/svg-draws2.component';
     SvgMarkerComponent,
     UsComponent,
     SvgDrawsComponent,
-    SvgDraws2Component
+    SvgDraws2Component,
+    GalleryComponent
   ],
   providers: [DataService]
 })

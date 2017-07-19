@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { trigger, transition, animate, style, state } from '@angular/animations';
 
 @Component({
   selector: 'app-product-card',
@@ -9,10 +10,17 @@ export class ProductCardComponent implements OnInit {
 
   @Input() imgUrl: string;
   @Input() productName: string;
+  @Input() imgGalleryUrls: string[];
+
+  isOpen = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showGallery() {
+    this.isOpen = !this.isOpen;
   }
 
 }

@@ -1,16 +1,18 @@
-<div class="container">
+ <div class="container">
 
-
+    <ng-container *ngFor="let producto of filteredByCat; let i = index">
         <app-product-card
             class="col-sm-3"
-            *ngFor="let producto of filteredByCat; let i = index"
             [ngStyle]="{
                 'animation': 'slideIn 0.4s ease-in 1'
             }"
             [productName]="producto.nombre"
-            [imgUrl]="producto.portadaImgUrl">
+            [imgUrl]="producto.portadaImgUrl"
+            [imgGalleryUrls]="producto.galeriaImgUrls">
         </app-product-card>
+    </ng-container>
+        
         
 
 
-</div>
+</div> 

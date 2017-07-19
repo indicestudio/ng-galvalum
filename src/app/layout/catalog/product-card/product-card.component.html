@@ -1,6 +1,14 @@
-<div class="card">
+<div class="card" (click)="showGallery()">
+
   <div class="image" [ngStyle]="{'background-image':'url(' + imgUrl + ')'}"></div>
   <div class="card-content">
     <p>{{productName}}</p>
   </div>
+
 </div>
+
+<app-gallery 
+  *ngIf="isOpen"
+  [galImgUrls]="imgGalleryUrls"
+  (close)="showGallery()">
+</app-gallery>

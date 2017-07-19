@@ -1,0 +1,8 @@
+<div [@enterAnimation] class="gallery">
+  <div id="close" (click)="closeGallery()" class="glyphicon glyphicon-remove"></div>
+  <div 
+    class="img-container"
+    [ngStyle]="{'background-image':'url(' + galImgUrls[index] + ')'}">
+    <i id="next" class="glyphicon glyphicon-forward" (click)="nextImage(index)"></i>
+  </div>
+</div>
