@@ -13,16 +13,16 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     {
       'imgUrl': './assets/slideshow/bg1.jpg',
       'title': 'Somos Galva-Alum',
-      'desc': 'Líderes en Aluminio y techumbres de Zinc-Alum.'
+      'desc': 'Líderes en Aluminio y techumbres de Zinc-Alum. Sólo lo mejor para su hogar.'
     },
     {
       'imgUrl': './assets/slideshow/bg2.jpg',
-      'title': 'Second Slide',
-      'desc': 'No confíe su casa a cualquiera, confíe solo en nosotros.'
+      'title': 'Edifique su hogar con nosotros',
+      'desc': 'Ofrecemos servicios B2B a pequeños empresarios, ¿quiere nuestros productos en su tienda, contáctenos.'
     },
     {
       'imgUrl': './assets/slideshow/bg3.jpg',
-      'title': 'Third Slide',
+      'title': 'En aluminio, nadie nos supera.',
       'desc': '¿Tiene un proyecto de construcción? ¿Se desea preparar para este invierno? Confíe en Galva-Alum.'
     }
   ];

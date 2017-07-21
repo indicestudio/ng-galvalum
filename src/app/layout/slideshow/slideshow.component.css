@@ -36,11 +36,10 @@ ul, ol {
 .cb-slideshow li div { 
     z-index: 1000;
     position: absolute;
-    bottom: 50%;
+    top: 45%;
     left: 50%;
-    padding: 2rem;
     width: 300px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0;
     background-color: white;
@@ -105,4 +104,67 @@ ul, ol {
 }
 @media screen and (max-width: 600px) { 
     .cb-slideshow li div h3 { font-size: 3rem }
+}
+
+.description {
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+.description h6 {
+    text-align: left;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.description p {
+    text-align: left;
+    margin: 0;
+}
+
+footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: teal;
+    padding: 4rem;
+    color: white;
+}
+
+
+footer .col-sm-4 h1 {
+    margin: 0;
+    line-height: 4rem;
+}
+
+
+.col-sm-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column {
+    flex-direction: column;
+    text-align: left;
+}
+
+.icon, .desc {
+    display: inline-block;
+    text-align: left;
+}
+
+.icon {
+    font-size: 35px;
+    margin-right: 1.5rem;
+}
+
+.desc p {
+    margin-bottom: 0;
+}
+.tel {
+    display: inline-block;
 }

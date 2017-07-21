@@ -7,11 +7,61 @@
   <ul class="cb-slideshow">
 
     <li *ngFor="let slide of slides">
-      <span  [ngStyle]="{'background-image': 'url(' + slide.imgUrl + ')'}">{{slide.title}}</span>
-      <div class="description"><h3>{{slide.desc}}</h3></div>
+      <span  [ngStyle]="{'background-image': 'url(' + slide.imgUrl + ')'}"></span>
+
+      <div class="description">
+        <h6>{{slide.title}}</h6>
+        <p>{{slide.desc}}</p>
+      </div>
+
     </li>
 
 </ul>
 
-
 </div>
+<footer>
+  <div class="row">
+    <div class="col-sm-4 column">
+      <h1>Galva-Alum</h1>
+      <p>Líderes en estructuras de aluminio.</p>
+    </div>
+
+    <div class="col-sm-8">
+
+      <div class="col-sm-4">
+        <div class="icon">
+          <i class="glyphicon glyphicon-map-marker"></i>
+        </div>
+        <div class="desc">
+          <p>Avenida 12 de febrero</p>
+          <p>512 Chillán</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="icon">
+          <i class="glyphicon glyphicon-time"></i>
+        </div>
+        <div class="desc">
+          <p>Lun - Vie</p>
+          <p>8AM - 18PM</p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+          <div class="icon">
+            <i class="glyphicon glyphicon-earphone"></i>
+          </div>
+          <div class="desc">
+            <p>Teléfono</p>
+            <p>9851525</p>
+          </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</footer>
