@@ -48,6 +48,6 @@
 }
 
 .inner-item:hover {
-  border-bottom: 2px solid darkblue;
+  border-bottom: 2px solid #1a2871;
   cursor: pointer;
 }
