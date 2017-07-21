@@ -3,6 +3,7 @@
     border: 1px solid lightgray;
     height: 160px;
     margin: 2rem 1rem;
+    border-radius: 10px;
 }
 
 .image {
@@ -10,6 +11,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     width: 40%;
+    border-radius: 10px;
+    
 }
 
 .card-content {
